@@ -54,10 +54,12 @@ dotnet restore
 #### c) Configurer la base de données
 ```powershell
 # Créer et appliquer les migrations
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 
 # Si la commande ef n'est pas disponible, installer l'outil global
 dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 
